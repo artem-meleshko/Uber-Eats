@@ -1,0 +1,312 @@
+@import "./scss/restaurants-item.scss";
+@import "./scss/header.scss";
+@import "./scss/main.scss";
+@import "./scss/footer.scss";
+
+$color-gray-light: #e0e0e0;  
+$color-gray: #626262;
+$color-white: #fff;
+$color-green: #59bd5a;
+$color-black: #1d1d1d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;  /*Slow scroll to the top of the page. Not supported by Safari. Try  in Chrome*/
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  text-decoration: none;
+}
+  
+.link {
+  text-decoration: none;
+  margin: auto 0;
+  display: block;
+  -webkit-transition: all 500ms ease 0s;
+}
+ 
+.link:hover {
+    background: #262626;
+    color: $color-white;
+    cursor: pointer;
+    transition: all 500ms ease 0s;
+}
+
+.text-gray {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 13px;
+  color: $color-gray;
+}
+
+button[type="reset"] {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  color: $color-gray;
+  border: 0;
+  display: none;
+  padding: 0 10px;
+  border-radius: 50%;
+  background-color: $color-white;
+  transition: background 200ms;
+  outline: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+button[type="reset"]:hover {
+    background-color: $color-gray-light; 
+}
+
+input:valid ~ button[type="reset"] {
+  display: block;
+}  
+
+input[class="main-content__search-form"] {
+  font-size: 18px;
+  color: $color-black;
+}
+
+.hr {
+  width: 100%;
+  background: $color-white;
+  opacity: 0.4;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.arrow-to-top {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-color: $color-green;
+  border-radius: 2px;
+  right: 16px;
+  bottom: 24px;
+}
+
+.arrow-to-top::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(images/btn-up.png) center no-repeat;
+    width: 16px;
+    height: 25px;
+    bottom: 28px;
+    right: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    .main-content__container {
+      width: 100%;
+      max-width: -moz-fit-content;
+      max-width: -webkit-fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 1023px) {
+    .header {
+      padding: 16px 25px 16px 8px;
+    }
+    
+    .header__logo {
+      width: 106px;
+    }
+    
+    .header__address {
+      width: 304px;
+    }
+    
+    .header__address-time {
+      width: 57px;
+      font-size: 13px;
+    }
+    
+    .header__address-place {
+      max-width: 215px;
+    }
+  }
+  
+  @media (max-width: 639px) {
+    .header {
+      padding: 16px 4px 16px 8px;
+    }
+    .header__address {
+      display: none;
+    }
+    .header__auth {
+      width: 156px;
+    }
+    .header__auth-sign-in {
+      width: 72px;
+      font-size: 11px;
+    }
+    .header__auth-register {
+      font-size: 11px;
+    }
+    .header__auth-cart {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .main-content {
+      padding: 30px 8px 48px 8px;
+  }
+    
+    .main-content__restaurants {
+      grid: auto-flow/repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 639px) {
+    .main-content__search::before {
+      width: 16px;
+      height: 16px;
+      bottom: 19px;
+      background-size: contain;
+  }  
+    
+    .main-content__search-form {
+      padding: 15px 30px;
+  }
+    
+    .main-content__search-form::placeholder {
+      font-size: 13px;
+  }
+    
+    .main-content__address {
+      display: flex;
+      justify-content: space-between;
+  }
+    
+  .main-content__address-time {
+      display: block;
+      width: 65px;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 40px;
+      color: $color-black;
+      text-transform: uppercase;
+      border: 1px solid $color-gray-light;
+      border-radius: 2px;
+      text-align: center;
+      margin-top: 8px;
+  }
+    
+  .main-content__address-place-form {
+      position: relative;
+      margin-top: 8px;
+  }
+    
+  .main-content__address-place-form::before {
+      content: "";
+      position: absolute;
+      background: url(images/location.svg) center no-repeat;
+      display: block;
+      width: 14px;
+      height: 16px;
+      top: 12.5px;
+      left: 11px;
+  }
+    
+  .main-content__address-place {
+      max-width: 227px;
+      border: 1px solid $color-gray-light;
+      border-radius: 2px;
+      padding: 8px 36px;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 24px;
+      color: $color-black;
+  }
+    
+    .main-content__restaurants {
+      grid: auto-flow/1fr;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .footer {
+      padding: 55px 8px 40px 8px;
+  }
+    
+    .footer__nav {
+      margin-bottom: 51px;
+  }
+  
+    .footer__nav-lang-input {
+      width: 176px;
+  }
+  
+    .footer__nav-social {
+      width: 96px;
+      margin-top: 15px;
+  }
+  
+    .arrow-to-top {
+      right: 16px;
+      bottom: 25px;
+    }
+  }
+  
+
+  
+  @media (max-width: 639px) {
+    .footer__nav {
+      grid: auto-flow/1fr;
+      margin-bottom: 40px;
+      padding-bottom: 0;
+  }
+    
+    .footer .column-2 {
+      margin-top: 39px;
+  }
+    
+    .footer .column-3 {
+      margin-top: 23px;
+  }
+  
+    .footer__app {
+      margin: 24px 0;
+  }
+  
+    .footer__app .gplay {
+      margin-left: 24px;
+  }
+  
+    .footer__rights {
+      grid: auto-flow/1fr;
+  }
+    
+    .footer__rights .link {
+      margin-top: 24px;
+  }
+  
+    .arrow-to-top {
+      width: 64px;
+      height: 64px;
+  }
+  
+    .arrow-to-top::after {
+      bottom: 20px;
+      right: 24px;
+    }
+  }

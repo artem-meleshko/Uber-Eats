@@ -1,0 +1,42 @@
+$color-black: #1d1d1d;
+$color-gray: #626262;
+
+.restaurants-item {
+    padding: 0 0 20px;
+
+    &__image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        transition: transform .5s;
+    }
+    
+    &__image:hover {
+      transform: translate(0, -8px);
+    }
+    
+    &__heading {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 24px;
+      color: $color-black;
+      margin-top: 16px;
+    }
+    
+    &__cuisine {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 21px;
+      color: $color-gray;
+      margin-top: 4px;
+    }
+    
+    &__delivery-time {
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 21px;
+      color: $color-black;
+      margin-top: 4px;
+    }
+  }
+  

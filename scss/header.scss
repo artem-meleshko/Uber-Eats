@@ -1,0 +1,90 @@
+$color-gray-light: #e0e0e0; 
+$color-black: #1d1d1d;
+$color-gray: #626262;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 97px 0 81px;
+    box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+  
+    &__logo {
+      display: block;
+      width: 120px;
+      height: 100%;
+    }
+  
+    &__address {
+      display: flex;
+      width: 389px;
+      justify-content: space-between;
+      align-items: center;
+    }
+      
+    &__address-time {
+      display: block;
+      width: 65px;
+      height: 40px;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 40px;
+      color: $color-black;
+      text-transform: uppercase;
+      border: 1px solid $color-gray-light;
+      border-radius: 2px;
+      text-align: center;
+    }
+    
+    &__address .text {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+      color: $color-gray;
+      align-self: center;
+    }
+    
+    &__address-place-form {
+      position: relative;
+    }
+    
+    &__address-place-form::before {
+      content: "";
+      position: absolute;
+      background: url(images/location.png) center no-repeat;
+      display: block;
+      width: 14px;
+      height: 16px;
+      top: 12.5px;
+      left: 12px;
+    }
+    
+    &__address-place {
+      max-width: 292px;
+      border: 1px solid $color-gray-light;
+      border-radius: 2px;
+      padding: 8px 36px 8px 30px;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 24px;
+      color: $color-black;
+    }
+  
+    &__auth {
+      display: flex;
+      justify-content: space-between;
+      width: 221px;
+    }
+    
+    &__auth-sign-in,
+    &__auth-register {
+      width: 80px;
+      height: 40px;
+      border: 1px solid $color-gray-light;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 40px;
+      color: $color-black;
+      text-align: center;
+    }
+  }
