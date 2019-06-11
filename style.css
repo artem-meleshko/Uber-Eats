@@ -351,13 +351,19 @@ select {
   border-radius: 2px;
   right: 16px;
   bottom: 24px;
+  transition: .5s;
+  
 }
 
-.arrow-to-top::after {
+.arrow-to-top:hover {
+  background-color: #36b638;
+}
+
+.arrow-to-top::after{
   content: "";
   display: block;
   position: absolute;
-  background: url(images/btn-up.png) center no-repeat;
+  background: url(images/btn-up.svg) center no-repeat;
   width: 16px;
   height: 25px;
   bottom: 28px;
