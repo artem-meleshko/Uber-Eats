@@ -2,11 +2,7 @@
 <html lang="en"">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-            user-scalable=no,
-            initial-scale=1.0,
-            maximum-scale=1.0,
-            minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uber Eats</title>
     <link rel="stylesheet" href="style.css">
@@ -15,14 +11,16 @@
   <body>   
     <header class="header" id="to-top">  
       <a href="">
-        <img class="header__logo" src="images/logo.svg" alt="logo">
+        <img class="header__logo" src="images/logo.svg" alt="uber eats food-delivery">
       </a>
               
       <section class="header__address">
         <a href="#!" class="header__address-time link button">asap</a>
         <span class="text">to</span>
-        <form class="header__address-place-form">
-          <input class="header__address-place" type="text" value="ul. Tarasivska St, 16" placeholder="Enter your address here" required>
+        <form class="header__address-place-form" action="/action_page.php" method="post" onsubmit="send_form();">
+          <label for="header__address-place">
+            <input class="header__address-place" type="text" value="ul. Tarasivska St, 16" placeholder="Enter your address here" required>
+          </label>
         </form>
       </section>
     
@@ -36,7 +34,9 @@
     <main class="main-content">
       <section class="main-content__container">
         <form class="main-content__search">
-          <input class="main-content__search-form" type="text" placeholder="Search for restaurant or cuisine">
+          <label for="main-content__search-form">
+            <input class="main-content__search-form" type="text" placeholder="Search for restaurant or cuisine">
+          </label>
           <button type="reset" title="Click me to clear the input field">&times;</button>
         </form>
     
@@ -49,12 +49,14 @@
           <div>
             <span class="text-gray">To</span>
             <form class="main-content__address-place-form">
-              <input class="main-content__address-place" type="text" value="ul. Tarasivska St, 16">
+              <label for="main-content__address-place">
+                <input class="main-content__address-place" type="text" value="ul. Tarasivska St, 16">
+              </label>
             </form>
           </div>
         </div>
     
-        <h2 class="main-content__heading">Kyiv Restaurants</h2>
+        <h1 class="main-content__heading">Kyiv Restaurants</h1>
     
          <!--Product cards-------------->
         
@@ -180,11 +182,13 @@
       <section class="footer__nav">
         <div class="column-1">
           <form class="footer__nav-lang">
-            <select class="footer__nav-lang-input">
-              <option class="footer__nav-lang-input" value="РУССКИй">РУССКИЙ</option>
-              <option class="footer__nav-lang-input" selected value="ENGLISH">ENGLISH</option>
-              <option class="footer__nav-lang-input" value="УКРАЇНСЬКА">УКРАЇНСЬКА</option>
-            </select>
+            <label for="footer__nav-lang-input">
+              <select class="footer__nav-lang-input">
+                <option class="footer__nav-lang-input" value="РУССКИй">РУССКИЙ</option>
+                <option class="footer__nav-lang-input" selected value="ENGLISH">ENGLISH</option>
+                <option class="footer__nav-lang-input" value="УКРАЇНСЬКА">УКРАЇНСЬКА</option>
+              </select>
+            </label>
           </form>
       
           <p class="footer__nav-name">
